@@ -16,7 +16,8 @@ export async function POST(req: Request) {
     const newTodo = addTodo(text);
     return NextResponse.json(newTodo, { status: 201 });
   } catch (error) {
-    return NextResponse.json({ error: "Invalid request" }, { status: 500 });
+    
+    return NextResponse.json({ error: error }, { status: 500 });
   }
 }
 
@@ -30,6 +31,6 @@ export async function DELETE(req: Request) {
     deleteTodo(id);
     return NextResponse.json({ message: "Todo deleted" }, { status: 200 });
   } catch (error) {
-    return NextResponse.json({ error: "Invalid request" }, { status: 500 });
+    return NextResponse.json({ error: error }, { status: 500 });
   }
 }

@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import "@styles/globals.css";
 
 export const metadata: Metadata = {
-  title: "Dosue Interview",
+  title: "Dosu Interview",
   description: "A web-based TODO list ",
 };
 
